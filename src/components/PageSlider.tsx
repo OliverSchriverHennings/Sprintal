@@ -24,10 +24,10 @@ export const PageSlider = ({ children, variant, isOpen, onClick }: Props) => {
     <>
       <div
         onClick={onClick}
-        className={`h-full transition-all overflow-hidden ease-out-in duration-500 shadow-2xl" ${getColor(variant)} ${isOpen ? "w-full " : "w-16 flex justify-center items-center cursor-pointer hover:w-20"}`}
+        className={`ease-out-in shadow-2xl" h-full overflow-hidden transition-all duration-500 ${getColor(variant)} ${isOpen ? "w-full" : "flex w-16 cursor-pointer items-center justify-center hover:w-20"}`}
       >
-        {!isOpen && <p className="rotate-90  ">{variant}</p>}
-        {isOpen && <div className="starting:open:opacity-0 ">{children}</div>}
+        {!isOpen && <p className="rotate-90">{variant}</p>}
+        {isOpen && <div className="starting:open:opacity-0">{children}</div>}
       </div>
     </>
   );
